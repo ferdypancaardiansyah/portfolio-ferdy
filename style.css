@@ -1,0 +1,893 @@
+/* --- RESET & FONTS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* --- VARIABLES WARNA NEUBRUTALISM --- */
+:root {
+    --bg-color: #e0e7ff;
+    --border-color: #000000;
+    --accent-pink: #90edff;
+    --accent-yellow: #f7f80c;
+    --accent-blue: #90e0ef;
+    --shadow-offset: 6px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--border-color);
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid var(--border-color);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background-color: var(--accent-yellow);
+    padding: 5px 15px;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px 0px var(--border-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--border-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border: 3px solid transparent;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--accent-blue);
+    border: 3px solid var(--border-color);
+    box-shadow: 3px 3px 0px 0px var(--border-color);
+    transform: translate(-2px, -2px);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background:
+    linear-gradient(
+        135deg,
+        #020617,
+        #001b2e,
+        #000814
+    );
+    min-height: 90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:4rem 20px;
+    position:relative;
+    overflow:hidden;
+
+    min-height: 90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:4rem 20px;
+
+    position:relative;
+    overflow:hidden;
+}
+
+
+.hero-content{
+    z-index:1;
+    font-size: 1.5rem;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(5px);
+    padding:40px;
+    border:3px solid black;
+    box-shadow:12px 12px 0 0 black;
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+.hero-content::before{
+    content:"";
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:#00bfff;
+
+    filter:blur(180px);
+
+    opacity:0.4;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:-1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    background: var(--accent-blue);
+    display: inline-block;
+    padding: 5px 10px;
+    border: 3px solid var(--border-color);
+}
+
+/* --- BUTTON --- */
+.btn-brutal {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--accent-yellow);
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 6px 6px 0px 0px var(--border-color);
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+.btn-brutal:hover {
+    box-shadow: 0px 0px 0px 0px var(--border-color);
+    transform: translate(6px, 6px);
+}
+
+/* --- PROFILE SHOWCASE --- */
+.profile-showcase {
+    max-width: 1000px;
+    margin: -50px auto 50px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-card {
+    background: var(--accent-yellow);
+    border: 3px solid var(--border-color);
+    padding: 20px;
+    box-shadow: 8px 8px 0px 0px var(--border-color);
+    text-align: center;
+}
+
+.profile-card img {
+    width: 100%;
+    max-width: 600px;
+    border: 3px solid var(--border-color);
+    box-shadow: 5px 5px 0px 0px var(--border-color);
+}
+
+/* --- SECTIONS --- */
+.section-container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    background: var(--accent-blue);
+    display: inline-block;
+    padding: 10px 20px;
+    border: 3px solid var(--border-color);
+    box-shadow: 5px 5px 0px 0px var(--border-color);
+}
+
+/* --- GRID & CARDS --- */
+.grid-container {
+    perspective: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card{
+    background-color: white;
+    border: 3px solid var(--border-color);
+    padding: 20px;
+    box-shadow: 8px 8px 0px 0px var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    transform:
+        translateY(-10px)
+        rotateX(5deg)
+        rotateY(-5deg);
+
+    box-shadow:
+        18px 18px 0px 0px var(--border-color);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+    margin-bottom: 15px;
+    background-color: #ddd;
+    transition: 0.4s;
+}
+.card:hover .project-img{
+    transform:scale(1.08);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: black;
+    color: var(--accent-yellow);
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 5rem;
+    border-top: 3px solid var(--border-color);
+}
+
+footer p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    header{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* --- STYLE UNTUK ICON SKILL --- */
+.skill-icon {
+    display: inline-block; 
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    /* TAMBAHKAN INI SUPAYA DEVICON KELIATAN JELAS */
+    width: 80px;
+    height: 80px;
+    background: white;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 0 rgba(0,0,0,0.2);
+    color: #000000;
+    vertical-align: middle;
+}
+
+/* Icon warna-warni spesifik */
+.fa-html5 { color: #e34c26; }
+.fa-css3-alt { color: #264de4; }
+.fa-js { color: #f0db4f; }
+.fa-language { color: #ff90e8; } 
+.fa-flutter { color: #02569B; }
+.fa-file-excel { color: #217346; } /* Warna Hijau Khas Excel */
+
+
+/* --- STYLE UNTUK ICON CONTACT --- */
+.contact-card i {
+    margin-right: 8px;
+}
+
+/* Warna icon contact */
+.contact-card .fa-envelope {
+    color: #EA4335;
+}
+.contact-card .fa-whatsapp {
+    color: #25d366;
+}
+.contact-card .fa-map-marker-alt {
+    color: #ff4d4d;
+}
+.contact-card .fa-instagram {
+    color: #e1306c;
+}
+.contact-card .fa-github {
+    color: #333;
+}
+
+/* INI UNTUK PAS ZOOM DIKIT DI SERTIFIKATNYA */
+.card img {
+    transition: 0.3s;
+}
+.card img:hover {
+    transform: scale(1.03);
+}
+
+.about-wrapper{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    background:white;
+    border:3px solid black;
+    padding:30px;
+    box-shadow:8px 8px 0 0 black;
+}
+
+/*INI UNTUK FOTO GW SUPAYA LEBIH INTERAKTIF */
+.about-photo img{
+    width:100%;
+    max-width:280px;
+    border:3px solid black;
+    border-radius:20px;
+    box-shadow:6px 6px 0 0 black;
+    transition:0.4s;
+}
+
+.about-photo img:hover{
+    transform:scale(1.05);
+    box-shadow:
+        8px 8px 0 0 black,
+        0 0 25px #90e0ef;
+}
+
+.about-content{
+    flex:1;
+}
+
+.about-content h3{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+@media(max-width:768px){
+    .about-wrapper{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .about-photo img{
+        max-width:220px;
+    }
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--accent-yellow);
+    border: 3px solid black;
+    padding: 8px 16px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0 0 black;
+}
+
+.hero-content p {
+    max-width: 750px;
+    margin: 0 auto 2rem auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-secondary{
+    background: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 5rem 20px;
+    }
+
+    .hero-content h1 {
+        font-size:4rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-brutal {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+/* ANIMASI JUDUL SECTION */
+
+.section-title{
+    transition: 0.3s ease;
+}
+
+.section-title:hover{
+    transform: translateY(-5px) rotate(-2deg);
+    box-shadow: 10px 10px 0 0 black;
+}
+
+/* SKILL PROGRESS BAR */
+.skill-progress {
+    margin-top: 15px;
+}
+
+.skill-progress span {
+    font-weight: 900;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 18px;
+    background: white;
+    border: 3px solid black;
+    box-shadow: 4px 4px 0 0 black;
+    overflow: hidden;
+}
+
+.progress-fill{
+    height:100%;
+    background:var(--accent-yellow);
+    width:0;
+    transition:2s;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    width:60px;
+    height:60px;
+
+    background:#25D366;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    font-size:30px;
+
+    text-decoration:none;
+
+    border:3px solid black;
+
+    box-shadow:5px 5px 0 black;
+
+    transition:0.3s;
+
+    z-index:1000;
+}
+
+.whatsapp-float:hover{
+    width:180px;
+    border-radius:50px;
+}
+
+
+/* HERO SOCIAL */
+.hero-social{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:20px 0;
+}
+
+.hero-social a{
+    font-size:40px;
+    color:black;
+    transition:0.3s;
+}
+
+.hero-social a:hover{
+    transform:translateY(-8px) scale(1.2);
+    color:#00bfff;
+}
+
+.whatsapp-float span{
+    max-width:0;
+    overflow:hidden;
+    white-space:nowrap;
+
+    transition:0.3s;
+
+    font-size:16px;
+    font-weight:bold;
+}
+
+.whatsapp-float:hover span{
+    max-width:120px;
+    margin-left:10px;
+}
+
+
+/* NAVBAR SCROLL EFFECT */
+header {
+    transition: 0.3s ease;
+}
+
+header.scrolled {
+    background-color: var(--accent-yellow);
+    box-shadow: 0 6px 0 0 black;
+}
+
+header.scrolled .logo {
+    background-color: white;
+}
+
+
+.job-title{
+    padding-bottom:15px;
+    border-bottom:2px solid #ddd;
+    font-size:1.2rem;
+    font-weight:900;
+    color:#333;
+    margin-bottom:20px;
+}
+
+.about-info{
+    margin:20px 0;
+}
+
+.about-info p{
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+
+@keyframes glowPulse{
+    0%{
+        opacity:0.15;
+    }
+
+    50%{
+        opacity:0.30;
+    }
+
+    100%{
+        opacity:0.15;
+    }
+}
+
+.hero-content::before{
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* TOMBOL MODEL */
+.project-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 20px;
+    background:#f5f500;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border:3px solid black;
+    box-shadow:5px 5px 0 black;
+    transition:0.3s;
+}
+.project-btn:hover{
+    transform:translate(-3px,-3px);
+    box-shadow:8px 8px 0 black;
+}
+
+
+
+.project-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:15px 0;
+}
+
+.project-tags span{
+    background:var(--accent-blue);
+    border:2px solid black;
+    padding:5px 10px;
+    font-size:0.85rem;
+    font-weight:900;
+    box-shadow:3px 3px 0 black;
+}
+
+/*  ODOO  */
+.project-tags{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:15px;
+    margin-bottom:25px;
+}
+
+.project-tags span{
+    background:#87d6e8;
+    border:3px solid black;
+    padding:8px 15px;
+    font-weight:bold;
+    box-shadow:4px 4px 0 black;
+}
+
+/* DETAIL PROJECT IMAGE */
+.detail-img{
+    width:100%;
+    max-height:450px;
+    object-fit:contain;
+    border:3px solid black;
+    box-shadow:8px 8px 0 black;
+    background:white;
+    margin-bottom:25px;
+}
+
+/* UNTUK SEMUA POSTER */
+.poster-gallery{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    background:white;
+    border:3px solid black;
+    padding:25px;
+    box-shadow:8px 8px 0 black;
+}
+
+.poster-gallery img{
+    width:100%;
+    border:3px solid black;
+    box-shadow:5px 5px 0 black;
+    transition:0.3s;
+}
+
+.poster-gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* DARK mode */
+.theme-btn{
+    background:var(--accent-yellow);
+    border:3px solid black;
+    box-shadow:4px 4px 0 black;
+    padding:6px 12px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+body.dark-mode{
+    background:#070b12;
+    color:white;
+}
+
+body.dark-mode header{
+    background:#07111f;
+    border-bottom:3px solid #90e0ef;
+}
+
+body.dark-mode nav a{
+    color:white;
+}
+
+body.dark-mode .card,
+body.dark-mode .about-wrapper,
+body.dark-mode .hero-content{
+    background:#111827;
+    color:white;
+    border-color:#90e0ef;
+    box-shadow:8px 8px 0 #90e0ef;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .hero-badge{
+    background:#90e0ef;
+    color:black;
+}
+
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode li{
+    color:white;
+}
+
+body.dark-mode .project-tags span{
+    background:#90e0ef;
+    color:black;
+}
+
+body.dark-mode footer{
+    background:#020617;
+    color:#90e0ef;
+}
+
+body.dark-mode .logo{
+    background:#f5f500;
+    color:black;
+    box-shadow:6px 6px 0 #90e0ef;
+}
+
+
+body.dark-mode .btn-brutal,
+body.dark-mode .project-btn,
+body.dark-mode .theme-btn{
+    color:black;
+}
+
+body.dark-mode .hero-content p,
+body.dark-mode #typing-text{
+    color:black;
+}
+
+body.dark-mode .hero-social a{
+    color:white;
+}
+
+body.dark-mode .hero-social a:hover{
+    color:#90e0ef;
+}
+
+body.dark-mode .skill-icon{
+    background:white;
+    color:black;
+}
+
+body.dark-mode .section-container{
+    background:transparent;
+}
+
+body.dark-mode .poster-gallery,
+body.dark-mode .card{
+    background:#111827;
+    color:white;
+    border-color:#90e0ef;
+    box-shadow:8px 8px 0 #90e0ef;
+}
+
+body.dark-mode .detail-img,
+body.dark-mode .project-img{
+    background:#111827;
+    border-color:#90e0ef;
+}
+
+body.dark-mode header{
+    background:#07111f;
+}
+
+
+/* FIX DARK MODE UNTUK SEMUA HALAMAN */
+html.dark-mode body,
+body.dark-mode{
+    background:#070b12;
+    color:white;
+}
+
+html.dark-mode header,
+body.dark-mode header{
+    background:#07111f;
+    border-bottom:3px solid #90e0ef;
+}
+
+html.dark-mode .card,
+html.dark-mode .about-wrapper,
+html.dark-mode .hero-content,
+html.dark-mode .poster-gallery,
+body.dark-mode .card,
+body.dark-mode .about-wrapper,
+body.dark-mode .hero-content,
+body.dark-mode .poster-gallery{
+    background:#111827;
+    color:white;
+    border-color:#90e0ef;
+    box-shadow:8px 8px 0 #90e0ef;
+}
+
+html.dark-mode p,
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode li,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode li{
+    color:white;
+}
+
+html.dark-mode .section-title,
+html.dark-mode .hero-badge,
+body.dark-mode .section-title,
+body.dark-mode .hero-badge{
+    background:#90e0ef;
+    color:black;
+}
+
+html.dark-mode .btn-brutal,
+html.dark-mode .project-btn,
+html.dark-mode .theme-btn,
+body.dark-mode .btn-brutal,
+body.dark-mode .project-btn,
+body.dark-mode .theme-btn{
+    color:black;
+}
+
+html.dark-mode .logo,
+body.dark-mode .logo{
+    background:#f5f500;
+    color:black;
+    box-shadow:6px 6px 0 #90e0ef;
+}
+
+.detail-card{
+    margin-top:30px;
+    padding:30px;
+}
+
+body.dark-mode .detail-card{
+    background:#111827 !important;
+    color:white !important;
+}
+
+body.dark-mode .detail-card p,
+body.dark-mode .detail-card h3{
+    color:white !important;
+}
+
+.image-box{
+    overflow:hidden;
+}
+.image-box .detail-img{
+    width:100%;
+    max-height:500px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto;
+}

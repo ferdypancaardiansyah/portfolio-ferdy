@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Project - Apk MenuMakanan</title>
+    
+    <!-- IMPORT FONT & CSS (SAMA KAYAK INDEX) -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+        <script>
+    if(localStorage.getItem("theme") === "dark"){
+        document.documentElement.classList.add("dark-mode");
+        document.body?.classList.add("dark-mode");
+    }
+</script>
+
+</head>
+<body>
+
+    <!-- NAVBAR SEDERHANA (UNTUK TOMBOL BACK) -->
+    <header style="padding: 1rem 5%;">
+        <a href="index.html" class="btn-brutal" style="padding: 10px 20px; font-size: 0.9rem;">
+            <i class="fas fa-arrow-left"></i> Kembali
+        </a>
+    </header>
+
+    <!-- KONTEN VIDEO -->
+    <section class="section-container" style="text-align: center; margin-top: 2rem;">
+        <h2 class="section-title">ENJOY FOR WATCHING GUYS... </h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-color, #000);">
+            Berikut adalah video penjelasan mengenai aplikasi yang saya buat menggunakan Flutter.
+        </p>
+
+        <!-- CONTAINER VIDEO -->
+        <div class="card detail-card">
+            <video width="100%" controls style="border: 1px solid #ccc;">
+                <source src="video_apk.mp4.mkv" type="video/mp4">
+                Browser kamu tidak mendukung tag video.
+            </video>
+        </div>
+
+<div class="card detail-card" style="margin-top:3rem; text-align:left;">
+    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Tentang Aplikasi</h3>
+    <p style="font-size: 1.1rem; line-height: 1.6;">
+        Aplikasi MenuMakanan merupakan aplikasi berbasis Flutter yang dikembangkan untuk mempermudah pelanggan dalam melakukan pemesanan makanan dan minuman secara lebih praktis dan efisien.
+        Aplikasi ini dirancang dengan antarmuka yang user-friendly untuk memberikan pengalaman pengguna yang nyaman, serta didukung alur transaksi yang cepat dan mudah. 
+        Pengembangan aplikasi ini juga berfokus pada peningkatan kemudahan akses layanan, efisiensi proses pemesanan, serta pengalaman pengguna yang lebih optimal.
+    </p>
+</div>
+</div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Ferdy Panca Ardiansyah | Detail Project</p>
+    </footer>
+</body>
+</html>
